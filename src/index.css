@@ -1,0 +1,148 @@
+:root{
+  --withe-color: #ffffff;
+  --black-color: #000000;
+  --Navy-950: #303B59; 
+  --Navy-200: #CAC9FF;
+  --Navy-50: #ECF2FF;
+  --blue-800: #1125D6;
+  --blue-50: #F3F4FD;
+  --yellow-400: #FFB21E;
+  --yellow-50: #FFFBF4;
+  --red-400:  #FF5555;
+  --red-50: #FFF6F6;
+  --green-500: #00BB8F;
+  --green-50: #F2FCF9;
+  --gradient-1: linear-gradient(to top, rgba(77, 33, 201),rgba(37, 33, 201));
+  --gradient-2: linear-gradient(to bottom, #7755FF, #2F2CE9);
+  --ff: "Hanken Grotesk", sans-serif;
+}
+
+
+
+body{
+font-family: var(--ff);
+margin: 0;
+padding: 0;
+background-color: var(--blue-50);
+}
+
+.container{
+  background-color: var(--withe-color);
+}
+header{
+   background: var(--gradient-2);
+  text-align: center;
+  padding: 2rem;
+  color: var(--withe-color);
+  
+   
+   
+}
+header h3{
+  color: var(--Navy-200);
+}
+.score{
+  background: var(--gradient-1);
+ display: grid;
+ width: 15rem;
+ height: 15rem;
+  margin: 0 auto;
+  border-radius: 50%;  
+}
+.score-title{
+
+  font-size: 4rem;
+  font-weight: 900;
+  display: grid;
+}
+
+.score-title span{
+  font-size: 1rem;
+  color: var(--Navy-200);
+}
+
+main{
+  padding: 1rem;
+  display: grid;
+  gap: 1rem;
+  
+}
+.skill{
+  background-color: var(--red-50);
+  display: flex;
+  justify-content: space-between;
+  padding: .2rem 1rem;
+  border-radius: 1rem;
+}
+
+.info-skill{
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.skill:nth-child(3) {
+  background-color: var(--yellow-50);
+}
+.skill:nth-child(4) {
+  background-color: var(--green-50);
+}
+.skill:nth-child(5) {
+  background-color: var(--blue-50);
+}
+
+
+.skill:nth-child(2) span{
+  color: var(--red-400);
+}
+.skill:nth-child(3) span{
+  color: var(--yellow-400);
+}
+.skill:nth-child(4) span{
+  color: var(--green-500);
+}
+.skill:nth-child(5) span{
+  color: var(--blue-800);
+}
+
+.score-info{
+  display: flex;
+  gap: 1rem;
+}
+
+#score-100{
+  color: grey;
+}
+
+
+button{
+  background-color: var(--Navy-950);
+  color: var(--withe-color);
+  border: none;
+  padding: 1.2rem;
+  border-radius: 5rem;
+  margin-top: 2rem;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+
+@media (min-width: 500px) {
+  .container{
+    max-width: 800px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 10rem auto;
+    border-radius: 1rem;
+    gap: 2rem;
+  }
+  header{
+    border-radius: 1rem;
+    
+  }
+  main{
+    padding: 2rem;
+  }
+  
+}
