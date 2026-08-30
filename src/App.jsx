@@ -10,7 +10,7 @@ export default function App(){
  const skillnew = data.map((element) => {
   
   
-  return <Skill img={element.icon}
+  return <Skill img={`${import.meta.env.BASE_URL}${element.icon}`}
   
                 title={element.category}
                 score={element.score}
