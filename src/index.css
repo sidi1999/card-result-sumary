@@ -1,0 +1,131 @@
+:root{
+  --withe-color: #ffffff;
+  --black-color: #000000;
+  --Navy-950: #303B59; 
+  --Navy-200: #CAC9FF;
+  --Navy-50: #ECF2FF;
+  --blue-800: #1125D6;
+  --blue-50: #F3F4FD;
+  --yellow-400: #FFB21E;
+  --yellow-50: #FFFBF4;
+  --red-400:  #FF5555;
+  --red-50: #FFF6F6;
+  --green-500: #00BB8F;
+  --green-50: #F2FCF9;
+  --gradient-1: linear-gradient(to top, rgba(77, 33, 201),rgba(37, 33, 201));
+  --gradient-2: linear-gradient(to bottom, #7755FF, #2F2CE9);
+  --ff: "Hanken Grotesk", sans-serif;
+}
+body{
+font-family: var(--ff);
+margin: 0;
+padding: 0;
+background-color: var(--blue-50);
+}
+.container{
+  background-color: var(--withe-color);
+  margin: 10rem auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  justify-content: space-between;
+  max-width: 600px;
+  width: 100%;
+  
+  border-radius: 1rem;
+}
+.result {
+  background: var(--gradient-2);
+  color: var(--withe-color);
+  display: grid;
+  text-align: center;
+  gap: 1rem;
+  padding: 1rem;
+  border-radius: 20px;
+}
+.points{
+  background: var(--gradient-1);
+  width: 13rem;
+  height: 13rem;
+  border-radius: 50%;
+  margin: 0 auto;
+ display: grid;
+}
+
+.score{
+  
+  font-size: 4rem;
+  font-weight: 900;
+  display: grid;
+  
+}
+
+.score span{
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--Navy-200);
+}
+.summary{
+  display: grid;
+  align-items: center;
+  padding: 1rem;
+}
+
+.cards{
+  display: grid;
+  align-items: center;
+  gap: 1rem;
+}
+.activity{
+  display: flex;
+  justify-content: space-around;
+  
+}
+
+.activity:nth-child(1){
+  background-color: var(--red-50);  
+}
+.activity:nth-child(2){
+  background-color: var(--yellow-50);
+}
+.activity:nth-child(3){
+  background-color: var(--green-50);
+}
+.activity:nth-child(4){
+  background-color: var(--blue-50);
+}
+
+
+.activity:nth-child(1) .category{
+  color: var(--red-400)
+}
+.activity:nth-child(2) .category{
+  color: var(--yellow-400)
+}
+.activity:nth-child(3) .category{
+  color: var(--green-500)
+}
+.activity:nth-child(4) .category{
+  color: var(--blue-800)
+}
+button{
+  background-color: var(--Navy-950);
+  color: var(--withe-color);
+  padding: 1rem;
+  border-radius: 5rem;
+  border: none;
+}
+
+
+@media (max-width: 600px) {
+  .container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 500px;
+  }
+  .summary{
+    display: grid;
+    width: 80%;
+  }
+}
