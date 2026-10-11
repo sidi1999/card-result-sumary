@@ -1,0 +1,31 @@
+name: Deploy React App to GitHub Pages
+
+on:
+  push:
+    branches: [ "main" ] # O "master", dependiendo de cómo se llame tu rama principal
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      # 1. Descargar el código del repositorio
+      uses: actions/checkout@v4
+
+      # 2. Configurar Node.js (puedes cambiar la versión si lo necesitas, ej: 18 o 20)
+      uses: actions/setup-node@v4
+      with:
+        node-version: '20'
+        cache: 'npm'
+
+      # 3. Instalar dependencias y construir el proyecto
+      - name: Install dependencies and build
+        run: |
+          npm install
+          npm run build
+
+      # 4. Subir los archivos generados a GitHub Pages
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist # Usa './build' si tu proyecto usa Create React App en lugar de Vite
